@@ -262,8 +262,8 @@ rowCustomers.innerHTML = customers.map(customer => `
         <div class="review-card p-4 h-100 shadow-sm border-0">
             <div class="d-flex align-items-center gap-3 mb-3">
                 <div class="avatar-wrapper">
-                    <img src="./image/${customer.img}" 
-                         class="rounded-circle shadow-sm" 
+                    <img src="./image/${customer.img}"
+                         class="rounded-circle shadow-sm"
                          width="70" height="70"
                          style="object-fit: cover;"
                          alt="${customer.name || "Anonymous"}">
@@ -284,3 +284,34 @@ rowCustomers.innerHTML = customers.map(customer => `
         </div>
     </div>
 `).join('')
+
+
+// User
+let username = localStorage.getItem('username')
+let nameText = document.getElementById('nameText')
+let links = document.getElementById('links')
+
+// Check User 1
+if (username) {
+    if (links) links.remove()
+    if (nameText) nameText.innerHTML = username
+}
+
+// Check User 2
+if (!username) {
+    setTimeout(() => {
+        window.location = './login.html'
+    }, 1000)
+
+}
+
+// Logout
+let logoutBtn = document.getElementById('logout')
+logoutBtn.addEventListener('click', () => {
+    localStorage.removeItem('username')
+    localStorage.removeItem('password')
+    localStorage.removeItem('email')
+    setTimeout(() => {
+        window.location = './login.html'
+    }, 1000)
+})

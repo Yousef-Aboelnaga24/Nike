@@ -42,7 +42,6 @@ body {
     }
 }
 
-/* Product Cards */
 .product {
     border: none !important;
     border-radius: 0 !important;
@@ -84,7 +83,6 @@ body {
     margin-bottom: 5px;
 }
 
-/* Buttons */
 .btn-primary {
     background-color: var(--nike-black);
     border: none;
@@ -95,7 +93,6 @@ body {
     background-color: #333;
 }
 
-/* Gallery Styles */
 .thumb-img {
     width: 100%;
     cursor: pointer;
