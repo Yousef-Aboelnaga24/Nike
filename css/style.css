@@ -59,12 +59,12 @@ body {
     transform: translateX(0);
 }
 
-.card-img-top{
+.card-img-top {
     transform: translateY(0) rotate(0);
     transition: all .3s ease;
 }
 
-.product:hover .card-img-top{
+.product:hover .card-img-top {
     transform: translateY(30px) rotate(40deg);
 
 }

@@ -207,10 +207,7 @@ function addToCart(id, btn) {
     }, 1500);
 
     drawCart()
-
 }
-
-// *=====================*
 
 // Customer Data
 const customers = [
@@ -257,6 +254,7 @@ const customers = [
         rating: 4
     }
 ]
+
 rowCustomers.innerHTML = customers.map(customer => `
     <div class="col-md-4 mb-4">
         <div class="review-card p-4 h-100 shadow-sm border-0">
